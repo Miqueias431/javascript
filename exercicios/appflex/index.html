@@ -13,10 +13,11 @@
         <h1>APP - Flex</h1>
         <img src="img/flex.png" alt="flex" id="status">
         <form name="frmflex">
-            <input type="text" name="txtEtanol" size="8" placeholder="Etanol" >
-            <input type="text" name="txtGasolina" size="8" placeholder="Gasolina" >
-            <input type="button" value="Vantagem" onclick="calcFlex()">
-            <input type="reset" value="Limpar" onclick="limpar()">
+            
+            <input type="number" name="txtEtanol" placeholder="Etanol" class="caixa">
+            <input type="number" name="txtGasolina" placeholder="Gasolina" class="caixa">
+            <input type="button" value="Vantagem" onclick="calcFlex()" class="botao">
+            <input type="reset" value="Limpar" onclick="limpar()" class="botao">
         </form>
     </div>
     <!-- a tag script liga o documento ao JS -->

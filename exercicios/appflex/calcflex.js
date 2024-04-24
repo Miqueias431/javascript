@@ -6,8 +6,8 @@
 let etanol, gasolina
 
 function calcFlex(etanol, gasolina) {
-    etanol = Number(frmflex.txtEtanol.value.replace(",", "."))
-    gasolina = Number(frmflex.txtGasolina.value.replace(",", "."))
+    etanol = Number(frmflex.txtEtanol.value)
+    gasolina = Number(frmflex.txtGasolina.value)
     // console.log(etanol)
     // console.log(gasolina)
 

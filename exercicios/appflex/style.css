@@ -10,3 +10,25 @@ body {
 .container img {
     max-width: 100%;
 }
+
+.caixa {
+    width: 300px;
+    padding: 10px;
+    margin: 10px 0;
+    font-size: 1em;
+}
+
+.botao {
+    font-size: 1em;
+    padding: 5px;
+    margin: 0 10px;
+    background-color: white;
+    border: black solid 1px;
+    transition: .5s;
+}
+
+.botao:hover {
+    background-color: black;
+    color: white;
+    transition: .5s;
+}
