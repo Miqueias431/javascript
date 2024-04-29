@@ -32,3 +32,12 @@ console.log(x)
 x++
 console.log(x)
 
+console.log("Comparadores")
+console.log("> | maior que")
+console.log("< | menor que")
+console.log(">= | maior ou igual a")
+console.log("<= | menor ou igual a")
+console.log("== | igual a")
+console.log("=== | estritamente igual a")
+console.log("!= | diferente de")
+console.log("!== | estritamente diferente de")
