@@ -4,12 +4,14 @@
  * @author Miquéias Rodrigues
  */
 
+const colors = require('colors');
+
 // sentenças
-console.log("Hello, World!\n")
+console.log("\nHello, World!\n" .rainbow)
 
 // Blocos
 {
-    console.log("Hello, JavaScript!\n")
+    console.log("Hello, JavaScript!\n" .random)
 }
 
 // omissão de chaves em estruturas de controle

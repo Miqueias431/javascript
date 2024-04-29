@@ -1,22 +1,39 @@
-Aula 1 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
-Na linguagem JS o ; é opicional
-Podemos usar "" ou '' só não podemos misturar "'
-console.log //escrever no terminal
+Aula 1 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+Na linguagem JavaScript o ; é opcional
+Podemos usar '' ou ""  só não podemos misturar "'
+console.log //escrver no terminal
 console.clear() // limpar a tela do terminal
-Dica: "" Textos '' Importações
+"" se usa para textos e '' se usa para e '' para importações
 
-Nas estruturas de controle condicional e nos laços de 
-repetições podemos omitir as chaves, porém só uma linha de
-código é vinculada
-Dica: Não omitir as chaves
+Nas estruturas de controle condicional e nos laços de repetições podemos omitir as chaves, porem só uma linha de código é vinculada.
+Dica: Não omitir chaves
 
-Variáveis na linguagem JS são dinamicamente tipadas
-somente temos 3 tipos (string, number e boolean)
+Variáveis na linguagem JS são dinamicamentes tipadas e somente temos 3 tipos (string, number e boolean)
 Para declarar uma constante ou variável podemos usar:
 const, var e let
-var (obsoleto - não usar, pois pode gerar BUG no projeto)
+var (obsoleto - não usar, pode ocasionar bugs)
 
 Strings:
-.replace(",",".") //substitui um caractere por outro
+.replace(",",".")  // Substitui um caractere por outro
 
 Concatenação (unir texto com conteúdo de variáveis)
++ (evitar o uso devido a tipagem dinâmica)
+`${}` (Mais usado em JS)
+
+Numbers:
+Number (converte para o tipo numérico)
+Number.isInteger (verifica se um número é inteiro ou não)
+.toFixed(2) (formatar em 2 casas decimais)
+
+Booleans: 
+Só admitem 2 valores: true or false
+
+Aula 2 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+Operadores aritiméticos
+ATENÇÃO a regra de precedência:
+1º) Parênteses
+2º) Multiplicação
+3º) Divisão
+4º) Soma
+5º) Subtração
+
