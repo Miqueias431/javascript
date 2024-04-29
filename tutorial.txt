@@ -37,3 +37,11 @@ ATENÇÃO a regra de precedência:
 4º) Soma
 5º) Subtração
 
+-------------------------
+Funções:
+Função é um bloco de código reutilizável
+Função simples:
+
+function nome (){
+    
+}
