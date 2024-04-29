@@ -20,3 +20,13 @@ if (etanol < 0.7 * gasolina) {
 
 saída: 
 etanol ou gasolina
+
+
+Aula 2 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+Operadores aritiméticos
+ATENÇÃO a regra de precedência:
+1º) Parênteses
+2º) Multiplicação
+3º) Divisão
+4º) Soma
+5º) Subtração
