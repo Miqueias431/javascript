@@ -79,12 +79,12 @@ function simular(valor) {
     // NOT 
 
     if (quebrada === false && path === "/exercicios/simulador/not.html") {
-        if (sw1 == true) {
-            document.getElementById("lamp")
-            .src = "./img/off.jpg"
-        } else if (sw1 == false) {
+        if (!sw1) {
             document.getElementById("lamp")
             .src = "./img/on.jpg"
+        } else {
+            document.getElementById("lamp")
+            .src = "./img/off.jpg"
         }
     }
 }
