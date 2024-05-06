@@ -15,6 +15,10 @@ img {
     max-width: 100%;
 }
 
+.containerand {
+    margin: 50px auto;
+    text-align: center;
+}
 
 /* Header */
 
@@ -61,14 +65,20 @@ nav ul li a:hover {
     text-decoration: underline;
 }
 
-/* Container */
+/* Conteudo */
 
-.container {
-    display: flex;
-    width: 100%;
-    margin: 0 auto;
-    padding: 10px;
-    justify-content: center;
+#sw1 {
+    
+    float: left;
+}
+
+#sw2 {
+    
+    float: right;
+}
+
+#lamp {
+    
 }
 
 /* Footer */
@@ -79,4 +89,19 @@ footer {
     color: white;
     text-align: center;
     padding: 5px 0;
+}
+
+/* Layout para telas grande */
+@media (min-width: 576px) {
+    header h1 {
+        text-align: left;
+    }
+
+    .containerand   {
+        text-align: left;
+    }
+
+    #sw2 {
+        float: left;
+    }
 }

@@ -12,6 +12,15 @@ let valor
 let quebrada = false
 
 function simular(valor) {
+    // chaves
+    
+    if (valor === 1) {
+        document.getElementById("lamp")
+        .src = "./img/on.jpg"
+    } else if (valor === 2) {
+        document.getElementById("lamp")
+        .src = "./img/off.jpg"
+    }
     // quebrar a lampada
     if (valor === 3) {
         let beep = new Audio()
