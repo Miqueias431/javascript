@@ -16,6 +16,10 @@ let quebrada = false
 let sw1 = false
 let sw2 = false
 
+let path = window.location.pathname 
+
+// alert(path)
+
 function simular(valor) {
     // Chaves do AND
     
@@ -50,7 +54,7 @@ function simular(valor) {
     }
 
      //  AND 
-     if (quebrada === false) {
+     if (quebrada === false && path === "/exercicios/simulador/and.html") {
         if (sw1 == true && sw2 == true) {
             document.getElementById("lamp")
             .src = "./img/on.jpg"
@@ -60,5 +64,28 @@ function simular(valor) {
         }
     }
 
+    // OR 
+
+    if (quebrada === false && path === "/exercicios/simulador/or.html") {
+        if (sw1 == true || sw2 == true) {
+            document.getElementById("lamp")
+            .src = "./img/on.jpg"
+        } else if (sw1 == false && sw2 == false) {
+            document.getElementById("lamp")
+            .src = "./img/off.jpg"
+        }
+    }
+
+    // NOT 
+
+    if (quebrada === false && path === "/exercicios/simulador/not.html") {
+        if (sw1 == true) {
+            document.getElementById("lamp")
+            .src = "./img/off.jpg"
+        } else if (sw1 == false) {
+            document.getElementById("lamp")
+            .src = "./img/on.jpg"
+        }
+    }
 }
 
