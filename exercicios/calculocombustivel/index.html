@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Calculadora de Combustível</title>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Calculadora de Combustível</h1>
+        <label for="distancia" class="labels">Distância da viagem (km):</label><br>
+        <input type="number" id="distancia" placeholder="Digite a distância da viagem" class="caixa"><br>
+        <label for="consumoMedio" class="labels">Consumo médio do veículo (km/litro):</label><br>
+        <input type="number" id="consumoMedio" placeholder="Digite o consumo médio do veículo" class="caixa"><br>
+        <label for="precoCombustivel" class="labels">Preço do combustível por litro (R$):</label><br>
+        <input type="number" id="precoCombustivel" placeholder="Digite o preço do combustível por litro"
+            class="caixa"><br>
+        <button onclick="calcularCombustivel()" id="btnCalc">Calcular</button>
+        <div id="resultado"></div>
+    </div>
+
+    <script src="calculocombustivel.js"></script>
+</body>
+
+</html>
