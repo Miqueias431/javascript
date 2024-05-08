@@ -2,16 +2,11 @@
  * Calculadora de combustível
  * @author Miqueias Rodrigues
  */
-let distancia
-let consumoMedio
-let precoCombustivel
-let combustivelNecessario
-let custoTotal
-let resultado
+let distancia,consumoMedio,precoCombustivel,combustivelNecessario,custoTotal,resultado
 function calcularCombustivel() {
-    distancia = document.getElementById('distancia').value
-    consumoMedio = document.getElementById('consumoMedio').value
-    precoCombustivel = document.getElementById('precoCombustivel').value
+    distancia = Number (document.getElementById('distancia').value)
+    consumoMedio = Number (document.getElementById('consumoMedio').value)
+    precoCombustivel = Number (document.getElementById('precoCombustivel').value)
 
     combustivelNecessario = (distancia / consumoMedio).toFixed(2);
     custoTotal = (combustivelNecessario * precoCombustivel).toFixed(2);
