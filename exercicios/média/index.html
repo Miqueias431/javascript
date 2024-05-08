@@ -1,25 +1,34 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <title>Boletim</title>
+    <title>Calcular Status do Aluno</title>
 </head>
+
 <body>
-    <div class="container">
-        <h1>Média do Aluno</h1>
-        <img src="img/inicio.png" alt="flex" id="status">
-        <form action="frmflex" class="flex">
-            <input type="number" name="txtnota1" placeholder="Primeira nota" class="caixa">
-            <input type="number" name="txtnota2" placeholder="Segunda nota" class="caixa">
-            <input type="number" name="txtnota3" placeholder="Terceira nota" class="caixa">
-            <input type="number" name="txtnota4" placeholder="Quarta nota" class="caixa">
-            <input type="button" value="Ver nota" onclick="calcFlex()" class="botao">
-        </form>
+    <h1>Calculadora de Status do Aluno</h1>
+    <div class="imgparte1">
+        <img src="img/inicio.png" alt="flex">
+    </div>
+
+    <form action="frmflex" id="frmNotas" class="flex" id="status">
+        <input type="number" id="nota1" name="nota1" placeholder="Primeira nota" class="caixa">
+        <input type="number" id="nota2" name="nota2" placeholder="Segunda nota" class="caixa">
+        <input type="number" id="nota3" name="nota3" placeholder="Terceira nota" class="caixa">
+        <input type="number" id="nota4" name="nota4" placeholder="Quarta nota" class="caixa">
+        <input type="button" id="btnCalcular" value="Calcular Status">
+    </form>
+
+    <div id="resultado">
+        <h2>Status do Aluno:</h2>
+        <p id="status"></p>
+        <img id="imgStatus" src="" alt="Imagem de Status">
     </div>
 
     <script src="calcflex.js"></script>
-
 </body>
+
 </html>

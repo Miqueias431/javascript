@@ -1,16 +1,29 @@
-// Se o aluno tiver uma média acima ou igual a 7,
-// então estará APROVADO. Senão se a média
-// for abaixo ou igual a 4, estão estará REPROVADO
-// caso contrário, estará em RECUPERAÇÃO
+function calcularStatus() {
+    // Obter os valores das notas do aluno
+    let nota1 = parseFloat(document.getElementById('nota1').value);
+    let nota2 = parseFloat(document.getElementById('nota2').value);
+    let nota3 = parseFloat(document.getElementById('nota3').value);
+    let nota4 = parseFloat(document.getElementById('nota4').value);
 
-function calcFlex() {
-    let txtnota = frmflex.txtnota.value
-    let media = txtnota / 2
+    // Calcular a média das notas
+    let media = (nota1 + nota2 + nota3 + nota4) / 4;
+
+    // Obter o elemento de status para atualizar
+    let statusElement = document.getElementById('status');
+    let imgElement = document.getElementById('imgStatus'); // Obtendo o elemento da imagem
+
+    // Verificar a média e definir o status
     if (media >= 7) {
-        document.getElementById('status').src = 'img/aprovado.png'
+        statusElement.textContent = 'APROVADO';
+        imgElement.src = 'img/aprovado.png';
     } else if (media <= 4) {
-        document.getElementById('status').src = 'img/reprovado.png'
+        statusElement.textContent = 'REPROVADO';
+        imgElement.src = 'img/reprovado.png';
     } else {
-        document.getElementById('status').src = 'img/recuperacao.png'
+        statusElement.textContent = 'RECUPERAÇÃO';
+        imgElement.src = 'img/recuperacao.png';
     }
 }
+
+// Chamar a função quando o botão for clicado (você pode alterar isso conforme necessário)
+document.getElementById('btnCalcular').addEventListener('click', calcularStatus);
