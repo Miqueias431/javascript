@@ -1,3 +1,8 @@
+/**
+ * Calcular Status do Aluno
+ * @author Miqueias Rodrigues
+ */
+
 function calcularStatus() {
     // Obter os valores das notas do aluno
     let nota1 = parseFloat(document.getElementById('nota1').value);

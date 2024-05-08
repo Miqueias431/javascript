@@ -1,5 +1,6 @@
 /**
  *  Regra de 3
+ *  @author Miqueias Rodrigues
  */
 
 // importação de pacote
