@@ -31,6 +31,8 @@ const hello4 = _=> console.log("Hello arrow function assigned simplified")
 hello4()
 console.log(typeof hello4)
 
+// ----------------------------------------------------------------------------------
+
 // Função simples com retorno
 function somarS(num1, num2) {
     return console.log(num1 + num2) // num1 + num2    
