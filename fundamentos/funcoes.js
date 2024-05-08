@@ -57,5 +57,5 @@ console.log(typeof somarAF)
 
 // Função anônima super simplificada (Arrow function) com retorno
 let somarAFS = (num1, num2) => console.log(num1 + num2)
-somarAFS(2, 4)
+somarAFS(2, 1)
 console.log(typeof somarAFS)
