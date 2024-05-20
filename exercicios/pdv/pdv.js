@@ -21,8 +21,4 @@ function calcularTroco() {
    
 }
 
-function limpar() {
-    frmPVD.reset()
-
-}
 
