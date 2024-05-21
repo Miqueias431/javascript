@@ -31,11 +31,21 @@ function sortearCarta() {
     document.getElementById('centro').innerHTML = `<div> ${nipe} </div>`
     document.getElementById('infDir').innerHTML = `<div> ${face}</div> <div>${nipe} </div>`
 
+    // Add imagem quando aparecer Q, J, R de forma separada.
+
+    if (face === 'Q') {
+        document.getElementById('centro').innerHTML=`<img src="./img/dama.png">`
+    } else if (face === 'K') {
+        document.getElementById('centro').innerHTML=`<img src="./img/rei.png">`
+    } else if (face === 'J') {
+        document.getElementById('centro').innerHTML=`<img src="./img/valete.png">`
+    }
+
     // Aplicar a cor
 
     document.getElementById('supEsq').style.color = cor //Add css
     document.getElementById('centro').style.color = cor
     document.getElementById('infDir').style.color = cor
 
-    // Add imagem quando aparecer Q, J, R.
+    
 }
