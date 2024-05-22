@@ -25,8 +25,8 @@ function sortearCarta() {
     `<img src="./img/king_of_hearts.png">`, `<img src="./img/king_of_spades.png">`, `<img src="./img/queen_of_clubs.png">`, 
     `<img src="./img/queen_of_diamonds.png">`, `<img src="./img/queen_of_hearts.png">`, `<img src="./img/queen_of_spades.png">`]
 
-    let carta1 = cartas[Math.floor(Math.random() * 53)]
     let carta2 = cartas[Math.floor(Math.random() * 53)]
+    let carta1 = cartas[Math.floor(Math.random() * 53)]
     let carta3 = cartas[Math.floor(Math.random() * 53)]
     let carta4 = cartas[Math.floor(Math.random() * 53)]
     let carta5 = cartas[Math.floor(Math.random() * 53)]

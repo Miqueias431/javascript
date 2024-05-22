@@ -1,24 +1,20 @@
-################################  Aula 01  ################################
-
-Na lingaugem JS o ; é opcional
+Aula 1 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+Na linguagem JS o ; é opcional
 Podemos usar "" ou '' só não podemos misturar "'
-console.log       //escrever no terminal
-console.clear()   //limpar a tela do terminal
-Dica: "" Textos  <->  '' Importações
+console.log //escrever no terminal
+console.clear() // limpar a tela do terminal
+Dica: "" Textos '' Importações
 
-Nas estruturas de controle condicional e nos laços
-de repetições podemos omitir as chaves, porém só
-uma linha de código é vinculada
+Nas estruturas de controle condicional e nos laços de repetições podemos omitir as chaves, porém só uma linha de código é vinculada
 Dica: Não omitir as chaves
 
-Variáveis na linguagem JS são dinamicamente tipadas
-e somente temos 3 tipos ("string", "number" e "boolean")
-Para delarar uma constante ou variável podemos usar:
-"const", "var" e "let"
+Variáveis na linguagem JS são dinamicamente tipadas e somente temos 3 tipos (string, number e boolean)
+Para declarar uma constante ou variável podemos usar:
+const, var e let
 var (obsoleto - não usar, pois pode gerar BUG no projeto)
 
 Strings:
-.replace("," , ".") //substitui um caracter por outro
+.repace(",",".")  //substitui um caractere por outro
 
 Concatenação (unir texto com conteúdo de variáveis)
 + (evitar o uso devido a tipagem dinâmica)
@@ -26,30 +22,34 @@ Concatenação (unir texto com conteúdo de variáveis)
 
 Numbers:
 Number (converte para o tipo numérico)
-Mumber.isInteger (verifica se um número é inteiro ou não inteiro)
+Number.isInteger (verifica se um número é inteiro ou não inteiro)
+.toFixed(2) (formatar em 2 casas decimais)
 
-################################  Aula 02  ################################
+Booleans:
+Só admitem 2 valores: true / false
 
+Aula 2 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 Operadores aritméticos
 ATENÇÃO a regra de precedência:
-1º - Parenteses
-2º - Soma
-3º - Subtração
-4º - Multiplicação
-5º - Divisão
+1º) Parênteses
+2º) Multiplicação
+3º) Divisão
+4º) Soma
+5º) Subtração
 
-Compaadores:
+Comparadores:
 Observação importante:
 NÃO usar os comparadores == != (riscos devido a tipagem dinâmica)
 
-------------------------
+----------------------------
 NPM (Node Package Manager)
 Gerenciador de pacotes node (pacotes com funcionalidades que podem ser adicionadas ao node)
-Para gerenciar (versão, atualizações etc.) os pacotes node, é necessário configurar o package.json
+Para gerenciar(versão, atualizações etc.) os pacotes node, é necessário configurar o package.json 
 
 json(JavaScript Object Notation)
 npm -version
 npm ls (listar pacotes instalados)
+npm i (instalar um pacote)
 npm r (remover um pacote)
 
 observação: os pacotes são instalados no projeto(raiz)
@@ -62,38 +62,50 @@ https://www.npmjs.com/
 
 Exercício:
 Criar no console JS um app para calcular a porcentagem, usando regra de 3, conforme modelo:
+
 10% de 200 = 20
 X      Y     valor
 
-regra de 3:
+200 ------------- 100%
+        \   / 
+          X
+        /   \      
+valor ----------- 10%
 
-  200   100%
-      X
-valor   10%
+valor x 100 = 200 x 10
 
-valor * 100 = 200 x 10
+valor x 100 = 2000
+ 
+            2000
+valor  =  --------
+             100
 
-valor * 100 = 2000
+        20
+valor = --
+         1
 
-valor = 2000 / 100
+valor = 20 
 
-corta o zero
+Dedução da fórmula para calcular porcentagem usando regra de 3
 
-valor = 20 / 1
+10% de 200 = 20
+X      Y     valor
 
-valor = 20
-
--------------------
+Y   ------------- 100%
+        \   / 
+          X
+        /   \      
+valor ----------- X
 
 valor * 100 = y * x
 
 valor = (x * y) / 100
 
 Variáveis:
-3 variáveis: x y valor
+3 variáveis:  x y valor
 
 Entrada:
-x , Y
+x , y
 
 Processamento:
 valor = (x * y) / 100
@@ -101,14 +113,90 @@ valor = (x * y) / 100
 Saída:
 valor
 
-------------------------
+-------------------------------------
 Funções:
 Função é um bloco de código reutilizável
 Função simples:
-
-function nome () {
-    
+function nome() {
+        
 }
 
-################################  Aula 04  ################################
+Função com retorno
+function nome() {
+  return
+}
 
+Funções anônimas
+const nome = function () {
+
+}
+
+let nome = function () {
+        
+}
+
+Funções em JavaScript moderno podem ser simplificadas
+
+_____________________________________________________
+obs:
+typeof //verifica a tipagem dinâmica
+tipos primitivos (string, number e boolean)
+function
+object
+
+_____________________________________________________
+POO - Programação Orientada a Objetos
+
+Pilares:
+- Abstração
+- Herança
+- Polimorfiamo
+- Encapsulamento (Segurança)
+
+Atenção!
+Toda classe modelo inicia com uma letra maiúscula
+
+IMPORTANTE!!!
+new -> indica a criação de um objeto
+this -> quando se refere a ele mesmo
+super -> indica o uso de atributos da classe pai
+polimorfismo é a mudança do comportamento de um método já existente.
+*** Atenção O polimorfismo não cria outro método, ele apenas modifica o comportamento de um método existente. Obrigatório usar o mesmo nome do método da classe pai.
+
+DICA:
+class Classe {} //cria uma classe modelo
+- O nome da classe sempre deve começar com uma letra maiúscula
+- Classe (biologia)
+- objeto (new) (substantivo)
+- atributos (variáveis) (adjetivos)
+- ações(métodos/funções) (verbos)
+
+Encapsulamento
+1) proteger a variável criando um modificador privado (acesso exclusivo da classe ao qual pertence)
+2) criar uma função para obter o conteúdo da variável (get)
+3) criar uma função para gravar um dado na variável (set)
+
+No JavaScript usamos _ antes da variável para encapsular
+
+---------------------------------------------------------
+No JavaScript objetos podem ser criados sem uma classe modelo
+Estruturas de dados usando objetos
+Exemplos:
+- package.json
+- coleção do banco de dados (MongoDB)
+
+ATENÇÃO !!!
+Tipos no JavaScript
+- string
+- number
+- boolean
+- function
+- object
+
+Aula 6 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+Array (vetor)
+Array multidimensional (matriz)
+
+- É uma forma especial de trabalhar com váriaveis
+- Índice [0][1]...
+- Na linguagem JS array é um objeto
