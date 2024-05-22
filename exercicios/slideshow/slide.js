@@ -5,7 +5,7 @@
  */
 
 let slides = ["slide1.jpg","slide2.jpg","slide3.jpg"]
-let intervalo = 5000 // 3000 milisegundos (3s)
+let intervalo = 6000 // 3000 milisegundos (3s)
 // 3000 ajuste para 3 slides trocando a cada 1s
 let indice = 0
 
