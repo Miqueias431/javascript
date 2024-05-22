@@ -220,3 +220,15 @@ Um array pode ser criado como uma estrutura de dados, junto com objetos e podem 
 
 ATENÇÃO !!!
 Sempre criar uma cópia do array original para exibição
+
+_____________________________________________________
+DOM - documment object modelo
+É uma técnica para identificar elementos HTML (tag) que serão manipulados pelo CSS ou JS
+É uma forma de trabalhar objetos com HTML
+A técnica consiste em atribuir um id ao elemento
+
+setTimeout(()=>{},1000) Usado para execultar um função infinitamente a cada determinado tempo (milisegundos)
+
+O JS é capaz de add ou remover uma class CSS ao documento HTML
+Usando o Id do elemento
+_____________________________________________________

@@ -1,0 +1,30 @@
+/**
+* Folha de estilo slide show
+* @author Miqueias Rodrigues
+*/
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+img {
+    max-width: 100%;
+}
+
+.container {
+    max-width: 1080px;
+    margin: 0 auto;
+}
+
+/* Efeito fade */
+
+#slide.FadeOut {
+    opacity: 0.1;
+}
+
+#slide {
+    transition: opacity 2s; /* Ajuste na Transição*/
+    opacity: 1;
+}
+
