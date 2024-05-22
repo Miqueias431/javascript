@@ -196,7 +196,27 @@ Tipos no JavaScript
 Aula 6 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 Array (vetor)
 Array multidimensional (matriz)
-
 - É uma forma especial de trabalhar com váriaveis
 - Índice [0][1]...
 - Na linguagem JS array é um objeto
+
+ATENÇÃO !!!
+Cuidado ao manipular os dados e alterar o índice do Array
+Mais seguro:
+- push() -> adiciona um elemento ao final do array
+- pop() -> excluir o ultimo registro
+- delete -> excluir um dado sem alterar o índice
+
+Percorrendo um array
+1) for forEach
+2) map() // percorre o array, faz algo e gera outro array com o resultado
+
+Um array também pode ser criado como um objeto
+
+let nome = []
+let nome = new Array()
+
+Um array pode ser criado como uma estrutura de dados, junto com objetos e podem ser usados filtros para manipulação dos dados
+
+ATENÇÃO !!!
+Sempre criar uma cópia do array original para exibição
