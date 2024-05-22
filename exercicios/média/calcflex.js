@@ -30,5 +30,5 @@ function calcularStatus() {
     }
 }
 
-// Chamar a função quando o botão for clicado (você pode alterar isso conforme necessário)
+// Chamar a função quando o botão for clicado
 document.getElementById('btnCalcular').addEventListener('click', calcularStatus);
