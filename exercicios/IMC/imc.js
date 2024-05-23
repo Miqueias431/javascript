@@ -1,5 +1,5 @@
 /**
- * Calco de IMC
+ * Calculo de IMC
  * @author Miquéias Rodrigues
  */
 
