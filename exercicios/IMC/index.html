@@ -9,14 +9,16 @@
 
 <body>
     <h1>Calculo de IMC</h1>
-        <form name="frmIMC"></form>
-        <label for="altura" class="labels">Digite a Altura:</label><br>
-        <input type="number" id="cAltura" placeholder="altura com vírgula"> m<br><br>
-        <label for="peso" class="labels">Digite o Peso:</label><br>
-        <input type="number" id="cPeso" placeholder="seu peso em quilos" class="caixa"> kg<br> <br>
-        <button onclick="calcularIMC()" id="btnCalc">Calcular o IMC</button>
-        <br><br>
-        <div id="resultado"></div>
+    <form name="frmIMC"></form>
+    <label for="cAltura" class="labels">Digite a Altura:</label><br>
+    <input type="number" id="cAltura" placeholder="altura com vírgula" required> m
+    <br><br>
+    <label for="cPeso" class="labels">Digite o Peso:</label><br>
+    <input type="number" id="cPeso" placeholder="seu peso em quilos" class="caixa" required> kg
+    <br><br>
+    <button onclick="calcularIMC()" id="btnCalc">Calcular o IMC</button>
+    <br><br>
+    <div id="resultado"></div>
     <script src="imc.js"></script>
 </body>
 
