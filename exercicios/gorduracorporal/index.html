@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora de Gordura Corporal do Exército</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Calculadora de Gordura Corporal</h1>
+        <form id="frm">
+            <div class="form-grupo">
+                <label for="genero">Gênero:</label>
+                <select id="genero" name="genero" required>
+                    <option value="homem">Masculino</option>
+                    <option value="mulher">Feminino</option>
+                </select>
+            </div>
+            <div class="form-grupo">
+                <label for="idade">Idade:</label>
+                <input type="number" id="idade" name="idade" required>
+            </div>
+            <div class="form-grupo">
+                <label for="altura">Altura (cm):</label>
+                <input type="number" id="altura" name="altura" required>
+            </div>
+            <div class="form-grupo">
+                <label for="pescoco">Circunferência do Pescoço (cm):</label>
+                <input type="number" id="pescoco" name="pescoco" required>
+            </div>
+            <div class="form-grupo">
+                <label for="cintura">Circunferência da Cintura (cm):</label>
+                <input type="number" id="cintura" name="cintura" required>
+            </div>
+            <div class="form-grupo" id="quadril-grupo">
+                <label for="quadril">Circunferência do Quadril (cm):</label>
+                <input type="number" id="quadril" name="quadril">
+            </div>
+            <div class="grupo-botao">
+                <button type="submit">Calcular</button>
+                <button type="button">Limpar</button>
+            </div>
+        </form>
+        <h2 id="resultado"></h2>
+    </div>
+    <script src="Calc.js"></script>
+</body>
+</html>

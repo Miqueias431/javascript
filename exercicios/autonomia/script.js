@@ -20,7 +20,7 @@ document.getElementById('autonomy-form').addEventListener('submit', function(eve
     document.getElementById('result').innerText = `Autonomia: ${autonomy.toFixed(2)} km`;
 });
 
-document.getElementById('clear-button').addEventListener('click', function() {
+document.addEventListener('click', function() {
     document.getElementById('tank-capacity').value = '';
     document.getElementById('fuel-efficiency').value = '';
     document.getElementById('result').innerText = '';
