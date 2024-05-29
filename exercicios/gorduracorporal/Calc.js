@@ -1,26 +1,24 @@
-let idade, genero, altura, pescoco, cintura, quadril, quadrilGroup
-
 document.getElementById('body-fat-form').addEventListener('submit', function(event) {
     event.preventDefault()
 
-    idade = parseInt(document.getElementById('idade').value)
-    genero = document.getElementById('genero').value
-    altura = parseFloat(document.getElementById('altura').value)
-    pescoco = parseFloat(document.getElementById('pescoco').value)
-    cintura = parseFloat(document.getElementById('cintura').value)
-    quadril = parseFloat(document.getElementById('quadril').value)
+    const idade = parseInt(document.getElementById('idade').value)
+    const genero = document.getElementById('genero').value
+    const altura = parseFloat(document.getElementById('altura').value)
+    const pescoco = parseFloat(document.getElementById('pescoco').value)
+    const cintura = parseFloat(document.getElementById('cintura').value)
+    const quadril = parseFloat(document.getElementById('quadril').value)
 
     let bodyFat
 
-    if (isNaN(idade) || isNaN(altura) || isNaN(pescoco) || isNaN(cintura) || (genero === 'female' && isNaN(quadril))) {
-        document.getElementById('resultado').innerText = 'Por favor, insira valores válidos.'
-        return
+    if (isNaN(idade) || isNaN(altura) || isNaN(pescoco) || isNaN(cintura) || (genero === 'mulher' && isNaN(quadril))) {
+        document.getElementById('resultado').innerText = 'Por favor, insira valores válidos.';
+        return;
     }
 
     if (genero === 'homem') {
-        bodyFat = 86.010 * Math.log10(cintura - pescoco) - 70.041 * Math.log10(altura) + 36.76
+        bodyFat = 495 / (1.0324 - 0.19077 * Math.log10(cintura - pescoco) + 0.15456 * Math.log10(altura)) - 450
     } else if (genero === 'mulher') {
-        bodyFat = 163.205 * Math.log10(cintura + quadril - pescoco) - 70.041 * Math.log10(altura) - 78.387
+        bodyFat = Math.round ((163.205 * (Math.log (cintura * 1 + quadril * 1 - pescoco * 1) / Math.log(10)) - 97.684 * (Math.log (altura) /Math.log(10)) - 104.912 *1 ) * 100) / 100
     }
 
     document.getElementById('resultado').innerText = `Percentual de Gordura Corporal: ${bodyFat.toFixed(2)}%`
@@ -28,7 +26,7 @@ document.getElementById('body-fat-form').addEventListener('submit', function(eve
 
 document.getElementById('clear-button').addEventListener('click', function() {
     document.getElementById('idade').value = ''
-    document.getElementById('genero').value = 'male'
+    document.getElementById('genero').value = 'homem'
     document.getElementById('altura').value = ''
     document.getElementById('pescoco').value = ''
     document.getElementById('cintura').value = ''
@@ -37,16 +35,16 @@ document.getElementById('clear-button').addEventListener('click', function() {
     togglequadrilField()
 })
 
-document.getElementById('genero').addEventListener('change', togglequadrilField)
+document.getElementById('gender').addEventListener('change', togglequadrilField);
 
 function togglequadrilField() {
-    genero = document.getElementById('genero').value
-    quadrilGroup = document.getElementById('quadril-grupo')
+    const genero = document.getElementById('genero').value
+    const quadrilgroup = document.getElementById('quadril-grupo')
 
     if (genero === 'mulher') {
-        quadrilGroup.style.display = 'block'
+        quadrilgroup.style.display = 'block'
     } else {
-        quadrilGroup.style.display = 'none'
+        quadrilgroup.style.display = 'none'
         document.getElementById('quadril').value = ''
     }
 }

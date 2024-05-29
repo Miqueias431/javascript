@@ -18,7 +18,7 @@ document.getElementById('body-fat-form').addEventListener('submit', function(eve
     if (gender === 'male') {
         bodyFat = 495 / (1.0324 - 0.19077 * Math.log10(waist - neck) + 0.15456 * Math.log10(height)) - 450
     } else if (gender === 'female') {
-        bodyFat = 163.205 * Math.log10(waist + hip - neck) - 97.684 * Math.log10(height) - 78.387;
+        bodyFat = Math.round ((163.205 * (Math.log (waist * 1 + hip * 1 - neck * 1) / Math.log(10)) - 97.684 * (Math.log (height) /Math.log(10)) - 104.912 *1 ) * 100) / 100
     }
 
     document.getElementById('result').innerText = `Percentual de Gordura Corporal: ${bodyFat.toFixed(2)}%`;

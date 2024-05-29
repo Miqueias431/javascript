@@ -1,49 +1,49 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Calculadora de Gordura Corporal do Exército</title>
+    <title>Calculadora de Gordura Corporal</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <div class="container">
-        <h1>Calculadora de Gordura Corporal</h1>
-        <form id="frm">
-            <div class="form-grupo">
-                <label for="genero">Gênero:</label>
-                <select id="genero" name="genero" required>
-                    <option value="homem">Masculino</option>
-                    <option value="mulher">Feminino</option>
+        <h1>Calculadora de Gordura Corporal do Exército</h1>
+        <form id="body-fat-form">
+            <div class="form-group">
+                <label for="age">Idade:</label>
+                <input type="number" id="age" name="age" required>
+            </div>
+            <div class="form-group">
+                <label for="gender">Gênero:</label>
+                <select id="gender" name="gender" required>
+                    <option value="male">Masculino</option>
+                    <option value="female">Feminino</option>
                 </select>
             </div>
-            <div class="form-grupo">
-                <label for="idade">Idade:</label>
-                <input type="number" id="idade" name="idade" required>
+            <div class="form-group">
+                <label for="height">Altura (cm):</label>
+                <input type="number" id="height" name="height" required>
             </div>
-            <div class="form-grupo">
-                <label for="altura">Altura (cm):</label>
-                <input type="number" id="altura" name="altura" required>
+            <div class="form-group">
+                <label for="neck">Circunferência do Pescoço (cm):</label>
+                <input type="number" id="neck" name="neck" required>
             </div>
-            <div class="form-grupo">
-                <label for="pescoco">Circunferência do Pescoço (cm):</label>
-                <input type="number" id="pescoco" name="pescoco" required>
+            <div class="form-group">
+                <label for="waist">Circunferência da Cintura (cm):</label>
+                <input type="number" id="waist" name="waist" required>
             </div>
-            <div class="form-grupo">
-                <label for="cintura">Circunferência da Cintura (cm):</label>
-                <input type="number" id="cintura" name="cintura" required>
+            <div class="form-group" id="hip-group">
+                <label for="hip">Circunferência do Quadril (cm):</label>
+                <input type="number" id="hip" name="hip">
             </div>
-            <div class="form-grupo" id="quadril-grupo">
-                <label for="quadril">Circunferência do Quadril (cm):</label>
-                <input type="number" id="quadril" name="quadril">
-            </div>
-            <div class="grupo-botao">
+            <div class="button-group">
                 <button type="submit">Calcular</button>
-                <button type="button">Limpar</button>
+                <button type="button" id="clear-button">Limpar</button>
             </div>
         </form>
-        <h2 id="resultado"></h2>
+        <h2 id="result"></h2>
     </div>
-    <script src="Calc.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
