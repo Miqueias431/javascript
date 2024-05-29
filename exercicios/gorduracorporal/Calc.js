@@ -1,52 +1,56 @@
+/**
+ * Calcular Gordura corporal
+ */
 document.getElementById('body-fat-form').addEventListener('submit', function(event) {
-    event.preventDefault()
+    event.preventDefault();
 
-    const idade = parseInt(document.getElementById('idade').value)
-    const genero = document.getElementById('genero').value
-    const altura = parseFloat(document.getElementById('altura').value)
-    const pescoco = parseFloat(document.getElementById('pescoco').value)
-    const cintura = parseFloat(document.getElementById('cintura').value)
-    const quadril = parseFloat(document.getElementById('quadril').value)
+    const age = parseInt(document.getElementById('age').value);
+    const gender = document.getElementById('gender').value;
+    const height = parseFloat(document.getElementById('height').value);
+    const neck = parseFloat(document.getElementById('neck').value);
+    const waist = parseFloat(document.getElementById('waist').value);
+    const hip = parseFloat(document.getElementById('hip').value);
 
-    let bodyFat
+    let bodyFat;
 
-    if (isNaN(idade) || isNaN(altura) || isNaN(pescoco) || isNaN(cintura) || (genero === 'mulher' && isNaN(quadril))) {
-        document.getElementById('resultado').innerText = 'Por favor, insira valores válidos.';
+    if (isNaN(age) || isNaN(height) || isNaN(neck) || isNaN(waist) || (gender === 'female' && isNaN(hip))) {
+        document.getElementById('result').innerText = 'Por favor, insira valores válidos.';
         return;
     }
 
-    if (genero === 'homem') {
-        bodyFat = 495 / (1.0324 - 0.19077 * Math.log10(cintura - pescoco) + 0.15456 * Math.log10(altura)) - 450
-    } else if (genero === 'mulher') {
-        bodyFat = Math.round ((163.205 * (Math.log (cintura * 1 + quadril * 1 - pescoco * 1) / Math.log(10)) - 97.684 * (Math.log (altura) /Math.log(10)) - 104.912 *1 ) * 100) / 100
+    if (gender === 'male') {
+        bodyFat = 495 / (1.0324 - 0.19077 * Math.log10(waist - neck) + 0.15456 * Math.log10(height)) - 450
+    } else if (gender === 'female') {
+        bodyFat = Math.round ((163.205 * (Math.log (waist * 1 + hip * 1 - neck * 1) / Math.log(10)) - 97.684 * (Math.log (height) /Math.log(10)) - 104.912 *1 ) * 100) / 100
     }
 
-    document.getElementById('resultado').innerText = `Percentual de Gordura Corporal: ${bodyFat.toFixed(2)}%`
+    document.getElementById('result').innerText = `Percentual de Gordura Corporal: ${bodyFat.toFixed(2)}%`;
 });
 
 document.getElementById('clear-button').addEventListener('click', function() {
-    document.getElementById('idade').value = ''
-    document.getElementById('genero').value = 'homem'
-    document.getElementById('altura').value = ''
-    document.getElementById('pescoco').value = ''
-    document.getElementById('cintura').value = ''
-    document.getElementById('quadril').value = ''
-    document.getElementById('resultado').innerText = ''
-    togglequadrilField()
-})
+    document.getElementById('age').value = '';
+    document.getElementById('gender').value = 'male';
+    document.getElementById('height').value = '';
+    document.getElementById('neck').value = '';
+    document.getElementById('waist').value = '';
+    document.getElementById('hip').value = '';
+    document.getElementById('result').innerText = '';
+    toggleHipField();
+});
 
-document.getElementById('gender').addEventListener('change', togglequadrilField);
+document.getElementById('gender').addEventListener('change', toggleHipField);
 
-function togglequadrilField() {
-    const genero = document.getElementById('genero').value
-    const quadrilgroup = document.getElementById('quadril-grupo')
+function toggleHipField() {
+    const gender = document.getElementById('gender').value;
+    const hipGroup = document.getElementById('hip-group');
 
-    if (genero === 'mulher') {
-        quadrilgroup.style.display = 'block'
+    if (gender === 'female') {
+        hipGroup.style.display = 'block';
     } else {
-        quadrilgroup.style.display = 'none'
-        document.getElementById('quadril').value = ''
+        hipGroup.style.display = 'none';
+        document.getElementById('hip').value = ''; // Clear the hip value when hiding the field
     }
 }
 
-togglequadrilField()
+// Initialize the form with the correct fields displayed
+toggleHipField();
