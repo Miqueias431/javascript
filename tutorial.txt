@@ -193,42 +193,64 @@ Tipos no JavaScript
 - function
 - object
 
-Aula 6 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+Aula 6 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 Array (vetor)
 Array multidimensional (matriz)
-- É uma forma especial de trabalhar com váriaveis
+- É uma forma especial de trabalhar com variáveis
 - Índice [0][1]...
 - Na linguagem JS array é um objeto
 
 ATENÇÃO !!!
-Cuidado ao manipular os dados e alterar o índice do Array
+Cuidado ao manipular os dados e alterar o índice do array
 Mais seguro:
-- push() -> adiciona um elemento ao final do array
-- pop() -> excluir o ultimo registro
-- delete -> excluir um dado sem alterar o índice
+push() - Método usado para adicionar ao final do array
+pop() - excluir o último registro do array
+delete - excluir um dado sem alterar o índice
 
 Percorrendo um array
 1) for forEach
-2) map() // percorre o array, faz algo e gera outro array com o resultado
+2) map() // percorre o array, faz algo e gera outro array com o resultado 
 
 Um array também pode ser criado como um objeto
 
 let nome = []
 let nome = new Array()
 
-Um array pode ser criado como uma estrutura de dados, junto com objetos e podem ser usados filtros para manipulação dos dados
+Um array pode ser criado como um estrutura de dados, junto com objetos e podem ser usados filtros para manipulação dos dados
 
-ATENÇÃO !!!
+Atenção!
 Sempre criar uma cópia do array original para exibição
-
-_____________________________________________________
-DOM - documment object modelo
-É uma técnica para identificar elementos HTML (tag) que serão manipulados pelo CSS ou JS
+______________________________________________________
+DOM - documment object model
+É uma técnica para identificar elementos HTML (tags) que serão mainipulados pelo CSS ou JS
 É uma forma de trabalhar objetos com HTML
 A técnica consiste em atribuir um id ao elemento
 
-setTimeout(()=>{},1000) Usado para execultar um função infinitamente a cada determinado tempo (milisegundos)
+setTimeout(()=>{},1000) Usado para executar uma função a infinitamente a cada determinado tempo (milisegundos)
 
-O JS é capaz de add ou remover uma class CSS ao documento HTML
-Usando o Id do elemento
-_____________________________________________________
+O JS é capaz de adicionar ou remover uma classe CSS ao documento HTML usando o id do elemento
+________________________________________________________
+
+Plataforma node
+Observação: Ao clonar um repositório ou trabalhar em um outro PC, é necessário reinstalar as bibliotecas presentes nas dependências do package.json
+
+npm install (digitar na raiz do projeto)
+
+-----------------------------------------------------
+Assincronismo:
+Métodos e funções que permitem ao JS trabalhar multitarefas
+- Banco de dados
+- Acesso a URLs (serviços de nuvem , web services, apis, etc)
+- Acesso ao disco(HD, SSD etc) do equipamento
+
+Promise ("promessa")
+1) A resposta a requisição pode ou não dar certo
+2) A reposta pode ter um atraso (tempo de retorno)
+sintaxe:
+return new Promise((resolve, reject) => {})
+//resolve - OK
+//reject - erro
+
+// Quando trabalhamos com promises, devemos usar a estrutura aabixo para obter o resultado do retorno da função
+.then(() => {})
+.catch(() => {})
