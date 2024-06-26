@@ -28,6 +28,7 @@ function calcularStatus() {
         statusElement.textContent = 'RECUPERAÇÃO';
         imgElement.src = 'img/recuperacao.png';
     }
+
 }
 
 // Chamar a função quando o botão for clicado
