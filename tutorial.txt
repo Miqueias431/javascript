@@ -256,3 +256,8 @@ return new Promise((resolve, reject) => {})
 .catch(() => {})
 
 obs: é possivel usar mais de um .then para trabalhar diferentes tipos de resposta
+
+_____________________________________________________
+Gerarndo um documento pdf no JavaScript
+
+npm i jspdf
